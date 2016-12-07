@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gallery</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+	<div>
+	<p><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg"></p>
+	<ul id="gallery">
+		<li><a href="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_1.jpg" title="Shockblade Zed"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_1.jpg"></a></li>
+		<li><a href="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg" title="Ninja Zed"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg"></a></li>
+		<li><a href="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_10.jpg" title="Champion Zed"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_10.jpg"></a></li>
+		<li><a href="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_3.jpg" title="Mecha Zed"><img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_3.jpg"></a></li>
+	</ul>
+	</div>
+	<script>
+	var gallery = document.getElementById('gallery');
+	var bigImg = document.querySelector('img');
+	function switchImg (href) {
+		bigImg.setAttribute('src', href);
+	}
+	gallery.onclick = function(event) {
+		var target = event.target;
+		if (target.tagName == "A") {
+			target = target.firstChild;
+		}
+		switchImg(target.src);
+		return false;
+		
+	}
+	</script>
+	<body>
+</html>
